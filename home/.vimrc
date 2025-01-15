@@ -11,14 +11,14 @@ Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/depuracao/vim-rdoc'
 Plug 'https://github.com/ecomba/vim-ruby-refactoring'
 Plug 'https://github.com/elzr/vim-json'
-# To set up copilot.vim, you need access to GitHub Copilot.
-#
-# Run these commands to set it up:
-#
-#     :PlugInstall
-#     :Copilot setup
-#
-# See also: https://github.com/github/copilot.vim?tab=readme-ov-file#getting-started
+" To set up copilot.vim, you need access to GitHub Copilot.
+"
+" Run these commands to set it up:
+"
+"     :PlugInstall
+"     :Copilot setup
+"
+" See also: https://github.com/github/copilot.vim?tab=readme-ov-file#getting-started
 Plug 'https://github.com/github/copilot.vim'
 Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'https://github.com/joukevandermaas/vim-ember-hbs'
