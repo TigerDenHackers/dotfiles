@@ -2,10 +2,8 @@ call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
 
-Plug 'https://github.com/AndrewRadev/vim-eco'
-Plug 'https://github.com/MarcWeber/vim-addon-mw-utils'
 Plug 'https://github.com/airblade/vim-gitgutter'
-Plug 'https://github.com/lifepillar/vim-solarized8'
+Plug 'https://github.com/AndrewRadev/vim-eco'
 Plug 'https://github.com/bkad/CamelCaseMotion'
 Plug 'https://github.com/briancollins/vim-jst'
 Plug 'https://github.com/chrisbra/csv.vim'
@@ -13,12 +11,23 @@ Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/depuracao/vim-rdoc'
 Plug 'https://github.com/ecomba/vim-ruby-refactoring'
 Plug 'https://github.com/elzr/vim-json'
+" To set up copilot.vim, you need access to GitHub Copilot.
+"
+" Run these commands to set it up:
+"
+"     :PlugInstall
+"     :Copilot setup
+"
+" See also: https://github.com/github/copilot.vim?tab=readme-ov-file#getting-started
+Plug 'https://github.com/github/copilot.vim'
 Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'https://github.com/joukevandermaas/vim-ember-hbs'
 Plug 'https://github.com/kana/vim-textobj-user'
 Plug 'https://github.com/kchmck/vim-coffee-script'
 Plug 'https://github.com/keith/swift.vim'
 Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/lifepillar/vim-solarized8'
+Plug 'https://github.com/MarcWeber/vim-addon-mw-utils'
 Plug 'https://github.com/mmai/wikilink'
 Plug 'https://github.com/nelstrom/vim-textobj-rubyblock'
 Plug 'https://github.com/othree/html5.vim'
