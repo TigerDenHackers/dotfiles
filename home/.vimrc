@@ -223,31 +223,56 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-let g:ale_scss_stylelint_executable = 'stylelint'
+"
+" ###########
+" linters
+"
+" See also: https://github.com/standardrb/standard/wiki/IDE:-vim
+" Use standard if available
+if executable('standardrb')
+  au User lsp_setup call lsp#register_server({
+        \ 'name': 'standardrb',
+        \ 'cmd': ['standardrb', '--lsp'],
+        \ 'allowlist': ['ruby'],
+        \ })
+endif
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
 
-let g:ale_javascript_eslint_executable = 'eslint'
-
-let g:ale_eruby_ruumba_executable = 'bundle'
-let g:ale_eruby_ruumba_options = '-e'
-
-let g:ale_ruby_ruby_executable = 'ruby'
-let g:ale_ruby_rubocop_executable = 'bundle'
-
-let g:ale_linters = {
-      \'ruby': ['rubocop', 'ruby'],
-      \'eruby': ['erubi', 'ruumba'],
-      \'javascript': ['eslint'],
-      \'scss': ['stylelint'],
-      \}
-
-let g:ale_fixers = {
-      \'*': ['remove_trailing_lines'],
-      \'javascript': ['eslint'],
-      \'scss': ['stylelint'],
-      \'ruby': ['rubocop'],
-      \}
-let g:ale_fix_on_save_ignore = ['stylelint', 'eslint', 'rubocop']
 let g:ale_fix_on_save = 1
+let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_hanging_elements = 0
+
+" TODO: clean this up
+" let g:ale_scss_stylelint_executable = 'stylelint'
+"
+" let g:ale_javascript_eslint_executable = 'eslint'
+"
+" let g:ale_eruby_ruumba_executable = 'bundle'
+" let g:ale_eruby_ruumba_options = '-e'
+"
+" let g:ale_ruby_ruby_executable = 'ruby'
+" let g:ale_ruby_rubocop_executable = 'bundle'
+"
+" let g:ale_linters = {
+"       \'ruby': ['rubocop', 'ruby'],
+"       \'eruby': ['erubi', 'ruumba'],
+"       \'javascript': ['eslint'],
+"       \'scss': ['stylelint'],
+"       \}
+"
+" let g:ale_fixers = {
+"       \'*': ['remove_trailing_lines'],
+"       \'javascript': ['eslint'],
+"       \'scss': ['stylelint'],
+"       \'ruby': ['rubocop'],
+"       \}
+" let g:ale_fix_on_save_ignore = ['stylelint', 'eslint', 'rubocop']
+" let g:ale_fix_on_save = 1
+"
+" /linters
+" ###########
+"
 
 " gitgutter: make the gutter always show, so it doesn't shift
 set signcolumn=yes
